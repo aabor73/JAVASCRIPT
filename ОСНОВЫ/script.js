@@ -399,7 +399,7 @@
 // ==== Преобразование некорректных чисел =====
 
 // let a = '2s'; // цифры вместе с буквами
-// console.log(Number(a)); // вернет NaN, так как 2s это не число 
+// console.log(Number(a)); // вернет NaN, так как 2s это не число
 
 // console.log(+'2s'); // вернет тоже NaN
 
@@ -583,15 +583,39 @@
 
 // ===== Получение символов строки =====
 
+// №1
+// let str = 'abcde';
+// console.log(str[0]); // a
+// console.log(str[2]); // c
+// console.log(str[4]); // e
 
+// №2
+// let str = 'abcde';
+// console.log(str[4] + str[3] + str[2] + str[1] + str[0]); // edcba
 
+// №3
+// let str = 'abcde';
+// let num = str[2];
+// console.log(num); // c
 
+// ===== Неизменяемость строк =====
+// Символы строк можно читать, но нельзя изменять.
 
+// let str = 'abcde';
+// str[0] = '!';
+// console.log(str); // Uncaught TypeError: Cannot assign to read
+// only property '0' of string 'abcde'
 
+// ===== Последний символ строки =====
 
+// №1
+// let str = 'abcde';
+// let last = str.length - 1;
+// console.log(last); // 4
 
+// let str = 'abcde';
+// let last = str.length - 1;
+// console.log(str[last]); // e
 
-
-
-
-
+// let str = 'abcde';
+// console.log(str[str.length - 1]); // e
